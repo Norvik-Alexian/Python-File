@@ -1,14 +1,21 @@
 # 1. Write some text to file using Python, then read it as binary data
-with open('file.txt', 'r') as file:
-    pass
-    # print(file.read())
+with open('file.txt', 'rb') as file:
+    print(file.read())
+
 
 # 2. Download manually some text file, add manually several splitting symbols to it (for instance ‘;;’), then read file
 # contents, split it by symbols, find the length of each chunk.
+def splitted_data():
+    with open('file.txt', 'r') as file:
+        file_data = file.read()
+        splited_data = file_data.split(';')
+        for data in splited_data:
+            print(len(data))
+
+splitted_data()
 
 
 # 3. Write some 100000 characters(random symbols) to a file using Python, then read that file and check how many ‘a’ symbols it contains
-
 def characters():
     file = open('text.txt', 'w')
     text = '''
@@ -51,13 +58,24 @@ def characters():
             counter += 1
     print(counter)
 
-# characters()
+characters()
 
 
 # 4. Find which number starting from 1 to 1000000 can be divided to 56, to 23 and to 7.
-
 def numbers():
     divisible_numbers = [i for i in range(1, 1000000) if i % 56 == 0 or i % 23 == 0 or i % 7 == 0]
     print(divisible_numbers)
 
 numbers()
+
+# 5. Read symbol from text file at some random position
+with open('file.txt', 'r') as file:
+    print(file.read(6))
+
+
+# 6. Download a big text file manually, find if it contains text word (place manually)
+def word_text():
+    with open('file.txt', 'r') as file:
+        if len(file.read()) > 1:
+            return True
+        return False
