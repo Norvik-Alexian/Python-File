@@ -62,11 +62,10 @@ characters()
 
 
 # 4. Find which number starting from 1 to 1000000 can be divided to 56, to 23 and to 7.
-divisible_numbers = [i for i in range(1, 1000000) if i % 56 == 0 or i % 23 == 0 or i % 7 == 0]
+divisible_numbers = [i for i in range(1, 1000000) if i % 56 == 0 and i % 23 == 0 and i % 7 == 0]
 print(divisible_numbers)
 
 
 # 5. Read symbol from text file at some random position
 with open('file.txt', 'r') as file:
     print(file.read(6))
-
