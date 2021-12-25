@@ -12,7 +12,7 @@ some character)
 Textual files have specific encoding (for instance UTF-8)
 
 ## Python IO:
-Python io module is basicc module for IO actions.
+Python io module is basic module for IO actions.
 
 ### Binary IO:
 Binary io procedure takes in raw binary data (bytes/byte array) and doesn't perform any action on it during reading/writing
